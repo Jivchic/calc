@@ -15,8 +15,6 @@ class Controller implements ActionListener {
 
 		String command = event.getActionCommand();
 
-		//System.out.println("" + command);		
-
 		if(command.equals("equal")) {
 			model.doAction('=');
 	        

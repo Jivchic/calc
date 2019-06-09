@@ -1,4 +1,5 @@
 
+import java.lang.NumberFormatException;
 
 class Model {
 
@@ -32,15 +33,14 @@ class Model {
 			argString = "0.";
 			
 		} else {		
-
-			int valueInt = Integer.parseInt(argString);
+			
 			double valueDouble = Double.parseDouble(argString);
-		
+			
+		        int valueInt =  (int)valueDouble;
+
 			if((double)valueInt == valueDouble) {
-				System.out.println(" (double)valueInt == valueDouble ");
 				argString = " " + valueInt + '.';
-		        } else { 
-				System.out.println(" (double)valueInt != valueDouble ");	
+		        
 			}
 		}
 
@@ -67,8 +67,6 @@ class Model {
                        
 			viewer.updateCommand("");
  
-			//System.out.println("r: " + rightValue + "; l: " + leftValue + "; arg: " + argString);			
-
 			if(rightValue == "") {
 				rightValue = argString;
 			}
@@ -110,7 +108,7 @@ class Model {
 			}
 
 		}
-                //System.out.println("r: " + rightValue + "; l: " + leftValue + "; arg: " + argString);
+
 		viewer.updateValue(argString);
 	
 	}

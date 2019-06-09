@@ -106,8 +106,27 @@ class Viewer {
         	buttonEqual.addActionListener(controller);
         	buttonEqual.setActionCommand("equal");
 
-                JFrame frame = new JFrame("Calc");
+		JLabel label1 = new JLabel("feature 1:   command indicator");
+		label1.setBounds(10, 300, 200, 15);
+        	label1.setForeground(java.awt.Color.blue);
+
+		JLabel label2 = new JLabel("feature 2:   5 + 2 ===== 15");
+		label2.setBounds(10, 320, 200, 15);
+        	label2.setForeground(java.awt.Color.blue);
+
+		JLabel label3 = new JLabel("feature 3:   CE -> . -> 0.");
+		label3.setBounds(10, 340, 200, 15);
+        	label3.setForeground(java.awt.Color.blue);
+
+		JLabel label4 = new JLabel("Frolov Dmitrii");
+		label4.setBounds(10, 350, 250, 15);
+        	label4.setForeground(java.awt.Color.red);
+                label4.setHorizontalAlignment(JTextField.RIGHT);
+                
+		
+		JFrame frame = new JFrame("Calc");
         	frame.setSize(300, 400);
+		frame.setLocation(400, 100);
         	frame.setLayout(null);
         	frame.setResizable(false);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -134,6 +153,12 @@ class Viewer {
 		
 		frame.add(buttonDot);
 		frame.add(buttonEqual);
+
+		frame.add(label1);
+		frame.add(label2);
+		frame.add(label3);
+		frame.add(label4);
+
 		
 		frame.setVisible(true);
 	}
